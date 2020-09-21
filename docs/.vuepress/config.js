@@ -15,6 +15,8 @@ module.exports = {
    *
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
+
+
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -39,23 +41,35 @@ module.exports = {
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/hongxinzz'
+        link: 'https://github.com/hongxinzz/'
       }
     ],
     sidebar: {
       '/blog/': [
         {
-          title: '前端必备的基础',
+          title: '前端必会基础',
           collapsable: false,
           children: [
-           '前端跨域的那些事'
+            'JavaScript变量、作用域',
+            'JavaScript预编译AO、GO',
+            '前端跨域的那些事'
           ]
         },
         {
-          title: '前端必备的手写代码',
+          title: '前端手写代码',
           collapsable: false,
           children: [
-           'javascript中的防抖和节流'
+            '手写一个jsonp',
+            'JavaScript中的防抖和节流',
+          ]
+        },
+        {
+          title: '浏览器的那些事',
+          collapsable: false,
+          children: [
+            '理解进程、线程',
+            '同步与异步',
+            '网络安全'
           ]
         }
       ],

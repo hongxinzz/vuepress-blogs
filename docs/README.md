@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: 积累、深入、实践
+heroImage: /img/jc.jpg
+tagline: 学习笔记
 actionText: 查看我的笔记
 actionLink: /blog/
 features:
