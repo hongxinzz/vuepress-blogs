@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue 2.x  响应式 | FreddZhuo学习笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="学习笔记">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.6a4be722.js" as="script"><link rel="preload" href="/assets/js/2.7e1709eb.js" as="script"><link rel="preload" href="/assets/js/24.52d939a3.js" as="script"><link rel="prefetch" href="/assets/js/10.e3b8489d.js"><link rel="prefetch" href="/assets/js/11.09fdbb9b.js"><link rel="prefetch" href="/assets/js/12.7e52a761.js"><link rel="prefetch" href="/assets/js/13.8132c992.js"><link rel="prefetch" href="/assets/js/14.39418901.js"><link rel="prefetch" href="/assets/js/15.5ab452f0.js"><link rel="prefetch" href="/assets/js/16.271c4fdf.js"><link rel="prefetch" href="/assets/js/17.ca8d52a1.js"><link rel="prefetch" href="/assets/js/18.0ca26d93.js"><link rel="prefetch" href="/assets/js/19.dc6df426.js"><link rel="prefetch" href="/assets/js/20.d41804b3.js"><link rel="prefetch" href="/assets/js/21.937e6ba1.js"><link rel="prefetch" href="/assets/js/22.04c957ee.js"><link rel="prefetch" href="/assets/js/23.312ec329.js"><link rel="prefetch" href="/assets/js/25.b8d93ff2.js"><link rel="prefetch" href="/assets/js/26.7d4c2091.js"><link rel="prefetch" href="/assets/js/27.7f6f9e16.js"><link rel="prefetch" href="/assets/js/28.2887b2cd.js"><link rel="prefetch" href="/assets/js/29.01e871d3.js"><link rel="prefetch" href="/assets/js/3.1794f74f.js"><link rel="prefetch" href="/assets/js/30.0d16d404.js"><link rel="prefetch" href="/assets/js/31.98937233.js"><link rel="prefetch" href="/assets/js/32.7c6bfb79.js"><link rel="prefetch" href="/assets/js/33.a7490a07.js"><link rel="prefetch" href="/assets/js/34.1dc7c3e0.js"><link rel="prefetch" href="/assets/js/35.18fec0ae.js"><link rel="prefetch" href="/assets/js/36.b880c8db.js"><link rel="prefetch" href="/assets/js/37.cf37f0fa.js"><link rel="prefetch" href="/assets/js/38.b8b3d2e1.js"><link rel="prefetch" href="/assets/js/39.7c78a005.js"><link rel="prefetch" href="/assets/js/4.186adf39.js"><link rel="prefetch" href="/assets/js/5.f9676b1f.js"><link rel="prefetch" href="/assets/js/6.b1533a7f.js"><link rel="prefetch" href="/assets/js/7.de1815b5.js"><link rel="prefetch" href="/assets/js/8.3f7b6eb9.js"><link rel="prefetch" href="/assets/js/9.57078175.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">FreddZhuo学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  博客
+</a></div><div class="nav-item"><a href="https://github.com/hongxinzz/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  博客
+</a></div><div class="nav-item"><a href="https://github.com/hongxinzz/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>必会基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>手写代码</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/write/Jsonp.html" class="sidebar-link">手写一个jsonp</a></li><li><a href="/blog/write/防抖节流.html" class="sidebar-link">防抖和节流</a></li><li><a href="/blog/write/柯里化.html" class="sidebar-link">curry</a></li><li><a href="/blog/write/实现new.html" class="sidebar-link">new关键字</a></li><li><a href="/blog/write/深拷贝.html" class="sidebar-link">深拷贝</a></li><li><a href="/blog/write/promiseAll.html" class="sidebar-link">promise.all</a></li><li><a href="/blog/write/promiseOnce.html" class="sidebar-link">promise.once</a></li><li><a href="/blog/write/promise并发.html" class="sidebar-link">promise并发请求</a></li><li><a href="/blog/write/实现vue路由.html" class="sidebar-link">vueRouter</a></li><li><a href="/blog/write/defineProperty.html" aria-current="page" class="active sidebar-link">vue2.0响应式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/write/defineProperty.html#vue-2-x-响应式" class="sidebar-link">vue 2.x  响应式</a></li></ul></li><li><a href="/blog/write/单例模式.html" class="sidebar-link">单例模式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>浏览器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端工程化</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="vue-2-x-响应式"><a href="#vue-2-x-响应式" class="header-anchor">#</a> vue 2.x  响应式</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 组件内data</span>
+<span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    age<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//模拟初始化</span>
+<span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取所有key  {name:'',age:''} =&gt;['name','age']</span>
+    <span class="token keyword">const</span> keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderDom</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> keys<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 监听</span>
+        <span class="token function">defineReactive</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> keys<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 监听</span>
+<span class="token keyword">function</span> <span class="token function">defineReactive</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//可遍历</span>
+        configurable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 可配置 可以删除 替换</span>
+        <span class="token function">get</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> val<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">set</span><span class="token punctuation">(</span>newVal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">#</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> newVal<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 生成dom</span>
+
+<span class="token keyword">function</span> <span class="token function">renderDom</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> fragment <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createDocumentFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> keys<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;div&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        div<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">,</span> keys<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fragment<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>fragment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">init</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+data<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">23</span><span class="token punctuation">;</span>
+data<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;xinghe&quot;</span><span class="token punctuation">;</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/write/实现vue路由.html" class="prev">
+        vueRouter
+      </a></span> <span class="next"><a href="/blog/write/单例模式.html">
+        单例模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6a4be722.js" defer></script><script src="/assets/js/2.7e1709eb.js" defer></script><script src="/assets/js/24.52d939a3.js" defer></script>
+  </body>
+</html>
